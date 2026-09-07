@@ -37,6 +37,8 @@ h1,h2,h3{font-family:var(--disp);text-wrap:balance;line-height:1;letter-spacing:
 .nav .brand{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:.5px}
 .nav .links{margin-left:auto;display:flex;gap:22px;align-items:center}
 .nav .links a{color:var(--skyline);font-weight:600;font-size:15px}
+.nav .links a.signin{border:1.5px solid rgba(255,255,255,.55);color:#fff;padding:8px 16px;border-radius:999px;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.6px}
+.nav .links a.signin:hover{background:rgba(255,255,255,.12)}
 .nav .links a.cta{background:var(--kit);color:#fff;padding:9px 16px;border-radius:999px;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.6px}
 .nav .links a:hover{text-decoration:none;color:#fff}
 
@@ -167,7 +169,8 @@ footer .right{margin-left:auto}
   .hero .phone{width:220px}
   .tiers{grid-template-columns:1fr}
   .tier .total{font-size:34px}
-  .nav .links a:not(.cta){display:none}
+  .nav .links a:not(.cta):not(.signin){display:none}
+  .nav .links{gap:10px}
   .bar{grid-template-columns:92px 1fr 54px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -188,7 +191,7 @@ footer .right{margin-left:auto}
       <a href="#minutes">Fair minutes</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="/app/">Club console</a>
+      <a class="signin" href="/app/">Sign in</a>
       <a class="cta" href="#get">GET THE APP</a>
     </div>
   </div>
@@ -205,7 +208,8 @@ footer .right{margin-left:auto}
         <a class="store" href="https://testflight.apple.com/join/XYmT5D63"><span class="ic"></span><span>iPhone &amp; iPad<small>early access via TestFlight</small></span></a>
         <a class="store" href="https://play.google.com/apps/testing/com.xraistudios.matchmanager"><span class="ic">▶</span><span>Android<small>early access via Google Play</small></span></a>
       </div>
-      <p class="fine"><b>Free to try.</b> Every team gets three match days before the club chooses a plan. Club managers: <a href="/app/" style="color:#fff;text-decoration:underline">open the club console on your laptop</a>.</p>
+      <p class="fine"><b>Free to try.</b> Every team gets three match days before the club chooses a plan.</p>
+      <p class="fine">Already with us? <a href="/app/" style="color:#fff;font-weight:700;text-decoration:underline">Sign in to the club console →</a></p>
     </div>
     <div class="phone"><img src="assets/10-live.png" alt="The live match screen: the lineup on the field, the clock running, subs and goals one tap away"></div>
   </div>
