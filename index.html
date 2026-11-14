@@ -34,9 +34,9 @@ h1,h2,h3{font-family:var(--disp);text-wrap:balance;line-height:1;letter-spacing:
 .nav{position:sticky;top:0;z-index:30;background:rgba(10,22,51,.92);backdrop-filter:blur(10px);color:#fff}
 .nav .wrap{display:flex;align-items:center;gap:12px;height:60px}
 .nav img{width:34px;height:34px;border-radius:8px}
-.nav .brand{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:.5px}
+.nav .brand{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:.5px;white-space:nowrap}
 .nav .links{margin-left:auto;display:flex;gap:22px;align-items:center}
-.nav .links a{color:var(--skyline);font-weight:600;font-size:15px}
+.nav .links a{color:var(--skyline);font-weight:600;font-size:15px;white-space:nowrap}
 .nav .links a.signin{border:1.5px solid rgba(255,255,255,.55);color:#fff;padding:8px 16px;border-radius:999px;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.6px}
 .nav .links a.signin:hover{background:rgba(255,255,255,.12)}
 .nav .links a.cta{background:var(--kit);color:#fff;padding:9px 16px;border-radius:999px;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.6px}
@@ -172,6 +172,18 @@ footer .right{margin-left:auto}
   .nav .links a:not(.cta):not(.signin){display:none}
   .nav .links{gap:10px}
   .bar{grid-template-columns:92px 1fr 54px}
+}
+/* Phones: the top bar's name and two buttons each stay on ONE line. */
+@media (max-width:520px){
+  .nav .wrap{gap:8px}
+  .nav img{width:30px;height:30px}
+  .nav .brand{font-size:17px;letter-spacing:.3px}
+  .nav .links{gap:7px}
+  .nav .links a.signin,.nav .links a.cta{padding:7px 11px;font-size:14px;letter-spacing:.3px}
+}
+@media (max-width:380px){
+  .nav .brand{font-size:14px;letter-spacing:0}
+  .nav .links a.signin,.nav .links a.cta{padding:6px 9px;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){
   .stage .screens img,.bar .fill,.reveal,.store{transition:none}
